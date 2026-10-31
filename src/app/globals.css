@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink-950: oklch(0.13 0.008 60);
+  --color-ink-900: oklch(0.17 0.01 60);
+  --color-ink-800: oklch(0.21 0.012 60);
+  --color-ink-700: oklch(0.26 0.013 60);
+  --color-ink-500: oklch(0.5 0.012 60);
+  --color-ink-400: oklch(0.66 0.012 60);
+  --color-ink-300: oklch(0.78 0.01 60);
+  --color-ink-100: oklch(0.96 0.005 60);
+  --color-accent: oklch(0.82 0.14 72);
+  --color-accent-strong: oklch(0.88 0.13 72);
+  --font-display: var(--font-display-face), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body-face), ui-sans-serif, system-ui, sans-serif;
+  --shadow-raised-sm: inset 0 1px 0 oklch(1 0 0 / 0.06), 0 1px 2px oklch(0 0 0 / 0.45);
+  --shadow-raised-md: inset 0 1px 0 oklch(1 0 0 / 0.08), 0 6px 16px oklch(0 0 0 / 0.5);
+  --shadow-raised-lg:
+    inset 0 1px 0 oklch(1 0 0 / 0.1), 0 24px 60px oklch(0 0 0 / 0.6), 0 2px 6px oklch(0 0 0 / 0.4);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
